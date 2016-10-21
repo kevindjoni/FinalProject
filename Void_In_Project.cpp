@@ -1,9 +1,19 @@
 #include <iostream>
-#include <ctime>
+#include <stdio.h>
+#include <time.h>
 #include <iomanip>
 using namespace std;
 
 void in()
 {
-	cout << "In Success" << endl;
+	time_t rawtime; 
+	struct tm *timeinfo;
+	
+	clock_t start;
+	
+	time(&rawtime);
+	timeinfo = localtime(&rawtime);
+	cout << "Please wait..." << endl;
+	printf("In Time and Date: %s", asctime(timeinfo));
+	start = clock();
 }

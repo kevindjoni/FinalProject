@@ -8,13 +8,12 @@
 #include "Void_Report_Project.cpp"
 using namespace std;
  
-int main()
+int main(int option)
 {
-	int option;
-				
 	cout << "Enter any of the following option with a number:" << "\n";
-	cout << "1. In" << endl;
-	cout << "2. Out" << endl;
+	cout << "------------------------------------------------" << endl;
+	cout << "1. Input" << endl;
+	cout << "2. Output" << endl;
 	cout << "3. Report" << endl;
 	cout << "4. Exit" << endl;
 	cout << "Your option: ";
@@ -44,7 +43,7 @@ int main()
 	}
 	
 	//in();
-	system("pause");
+	//system("pause");
 	//out();
 	//exit(0);
 	//report();
