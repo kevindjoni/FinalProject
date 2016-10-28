@@ -7,46 +7,57 @@
 #include "Void_Out_Project.cpp"
 #include "Void_Report_Project.cpp"
 using namespace std;
+
+int counter = 0;
  
-int main(int option)
-{
+int main()
+{	
+	int option;
+	
+	cout << "Parking Management System" << endl;
+	cout << "-------------------------" << endl;
 	cout << "Enter any of the following option with a number:" << "\n";
-	cout << "------------------------------------------------" << endl;
 	cout << "1. Input" << endl;
 	cout << "2. Output" << endl;
 	cout << "3. Report" << endl;
-	cout << "4. Exit" << endl;
 	cout << "Your option: ";
 	cin >> option;
 	
 	switch(option)
 	{
 		case 1 : 
-			in();
+			if(counter == 0)
+			{
+				in();
+				counter++;
+			}
+			else
+			cout<< "Invalid Input" << endl << endl;
+			main();
 			break;
 			
 		case 2 :
+			if(counter==1)
+			{
 			out();
+			counter++;
+			}
+			else
+			cout<< "Invalid Input" << endl << endl;
+			main();
 			break;
 			
 		case 3 :
+			if(counter == 2)
+			{
 			report();
-			break;
-			
-		case 4 :
+			counter++;
 			exit(0);
-			 break;
-		
-		default :
-			cout << "Error";
-			exit(0);
+			}
+			else
+			cout<< "Invalid Input" << endl << endl;
+			main();
 	}
-	
-	//in();
-	//system("pause");
-	//out();
-	//exit(0);
-	//report();
 	
 	return 0;
 }

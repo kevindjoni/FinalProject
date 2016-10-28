@@ -2,18 +2,21 @@
 #include <stdio.h>
 #include <time.h>
 #include <iomanip>
+#include <string>
 using namespace std;
 
 void in()
 {
 	time_t rawtime; 
 	struct tm *timeinfo;
+	string time1;
 	
 	clock_t start;
 	
 	time(&rawtime);
 	timeinfo = localtime(&rawtime);
-	cout << "Please wait..." << endl;
-	printf("In Time and Date: %s", asctime(timeinfo));
+	cout << endl;
+	time1 = asctime(timeinfo);
+	cout << "In Time and Date: " << "\n" << time1 << endl;
 	start = clock();
 }

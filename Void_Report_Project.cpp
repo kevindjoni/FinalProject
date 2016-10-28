@@ -1,19 +1,17 @@
 #include <iostream>
 #include <ctime>
 #include <iomanip>
+#include <string>
 using namespace std;
 
-struct data2
-{
-	
-};
-
 void report()
-{
-	cout << "Report" << endl;
+{	
+	double charge = 0.5;
+
+	cout << endl << "Report" << endl;
 	cout << "------" << endl;
-	cout << "In Time: " << " " << endl;
-	cout << "Out Time: " << " " << endl;
+	cout << "In Time: " << time1 << endl;
+	cout << "Out Time: " << time2 << endl;
 	cout << "Duration: " << " " << endl;
-	cout << "Charge: " << " " << endl; 
+	cout << "Charge: " << duration * charge << endl << endl; 
 }
