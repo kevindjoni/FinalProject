@@ -3,19 +3,26 @@
 #include <iomanip>
 #include <cstdlib>
 #include <string>
-#include "Void_In_Project.cpp"
-#include "Void_Out_Project.cpp"
 #include "Void_Report_Project.cpp"
 using namespace std;
 
 int counter = 0;
+
+void menu();
  
 int main()
-{	
-	int option;
-	
+{		
 	cout << "Parking Management System" << endl;
 	cout << "-------------------------" << endl;
+	menu();
+	
+	return 0;
+}
+
+void menu()
+{
+	int option;
+	
 	cout << "Enter any of the following option with a number:" << "\n";
 	cout << "1. Input" << endl;
 	cout << "2. Output" << endl;
@@ -31,33 +38,40 @@ int main()
 				in();
 				counter++;
 			}
+			
 			else
 			cout<< "Invalid Input" << endl << endl;
-			main();
+			menu();
 			break;
+
 			
 		case 2 :
-			if(counter==1)
+			if(counter == 1)
 			{
-			out();
-			counter++;
+				out();
+				counter++;
 			}
+			
 			else
 			cout<< "Invalid Input" << endl << endl;
-			main();
+			menu();
 			break;
+			
 			
 		case 3 :
 			if(counter == 2)
 			{
-			report();
-			counter++;
-			exit(0);
+				report();
+				counter++;
+				exit(0);
 			}
+			
 			else
 			cout<< "Invalid Input" << endl << endl;
-			main();
+			menu();
+			
+		default:
+			cout << "Invalid Input" << endl << endl;
+			menu();	
 	}
-	
-	return 0;
 }

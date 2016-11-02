@@ -2,16 +2,16 @@
 #include <ctime>
 #include <iomanip>
 #include <string>
+#include "Void_Out_Project.cpp"
 using namespace std;
 
 void report()
 {	
-	double charge = 0.5;
-
 	cout << endl << "Report" << endl;
 	cout << "------" << endl;
-	cout << "In Time: " << time1 << endl;
-	cout << "Out Time: " << time2 << endl;
-	cout << "Duration: " << " " << endl;
-	cout << "Charge: " << duration * charge << endl << endl; 
+	cout << "In Time & Date " << "\t\t: " << time1;
+	cout << "Out Time & Date " << "\t: " << time2;
+	cout << "Duration " << "\t\t: " << durationHr << " hour(s) " << durationMin;
+	cout << " minute(s) " << durationSec << " second(s)" << endl;
+	cout << "Charge " << "\t\t\t: $" << charge;
 }

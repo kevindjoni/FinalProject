@@ -1,17 +1,16 @@
 #include <iostream>
-#include <stdio.h>
 #include <time.h>
 #include <iomanip>
 #include <string>
 using namespace std;
 
+string time1;
+clock_t start;
+
 void in()
 {
-	time_t rawtime; 
+	time_t rawtime; 	
 	struct tm *timeinfo;
-	string time1;
-	
-	clock_t start;
 	
 	time(&rawtime);
 	timeinfo = localtime(&rawtime);
